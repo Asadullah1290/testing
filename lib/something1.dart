@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:pleasse/pages/login.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      // hello woerl
-      appBar: AppBar(
-        title: const Text("this is a house"),
-        backgroundColor: Colors.amber,
-        centerTitle: true,
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Login Page',
+      theme: ThemeData(
+        primarySwatch: Colors.deepOrange,
       ),
-    ),
-  ));
+      home: const LoginPage(),
+    );
+  }
 }
